@@ -8,10 +8,14 @@
     <h1>
       Weather App
     </h1>
-
-    <button>
-      Enter
-    </button>
-
+    <p>Input Location:</p>
+    <input type = "text" id = "locationInput">
+    <button onclick="setValue()">Enter</button>
+    <script>
+      function setValue(){
+        var location = document.getElementById('locationInput').value
+        console.log(location)
+      }
+    </script>
   </body>
 </html>
