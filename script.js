@@ -16,20 +16,24 @@ function getWeather() {
 }
 
 function displayWeather(data) {
-    const weatherInfoDiv = document.getElementById('weather-info');
+    const tempInfoDiv = document.getElementById('temp-info');
+    const conditionInfoDiv = document.getElementById('condition-info');
 
-    weatherInfoDiv.innerHTML = ' ';
+    tempInfoDiv.innerHTML = ' ';
+    conditionInfoDiv.innerHTML = ' ';
 
     const cityName = data.location.name;
     const currentTemp = Math.round(data.current.temp_c);
     const condition = data.current.condition.text;
     const feelsLike = Math.round(data.current.feelslike_c);
 
-    const weatherHTML = `
-        <p>${cityName}</p>
-        <p>${condition}</p>
+    const tempHTML = `
         <p>${currentTemp}&deg;C</p>
         <p>Feels Like ${feelsLike}&deg;C</p>
     `
-    weatherInfoDiv.innerHTML = weatherHTML;
+    const conditionHTML = `
+        <p>${condition}</p>
+    `
+    tempInfoDiv.innerHTML = tempHTML;
+    conditionInfoDiv.innerHTML = conditionHTML;
 }
