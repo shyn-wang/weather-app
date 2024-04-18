@@ -2,15 +2,25 @@
 <html>
   <head>
     <title> Weather </title>
+
+    <link rel="stylesheet" href="Weather.CSS">
   </head>
   <body>
+
+    <style> *
+      {
+        background: #091021
+      }
+      </style>
 
     <h1>
       Weather App
     </h1>
     <p>Input Location:</p>
     <input type = "text" id = "locationInput">
-    <button onclick="setValue()">Enter</button>
+< Natan
+    <button onclick="setValue()" id = "buttonEnter"> Enter</button>
+> main
     <script>
       function setValue(){
         var location = document.getElementById('locationInput').value
