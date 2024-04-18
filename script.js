@@ -62,14 +62,17 @@ function displayWeatherCurrent(data) {
     conditionInfoDiv.innerHTML = conditionHTML;
 
     document.body.classList.remove("morning");
+    document.body.classList.remove("day");
     document.body.classList.remove("evening");
     document.body.classList.remove("night");
 
-    if(hours >= 0 && hours <= 6){
+    if(hours >= 5 && hours <= 8){
         document.body.classList.add("morning");
-    } else if(hours >= 7 && hours <= 19) {
+    } else if (hours >= 9 && hours <= 17) {
+        document.body.classList.add("day");
+    } else if (hours >= 18 && hours <= 20) {
         document.body.classList.add("evening");
-    } else if(hours >=20  && hours <= 24){
+    } else if(hours >= 21  && hours <= 23 || hours >= 0 && hours <= 4){
         document.body.classList.add("night");
     }
 }
@@ -98,8 +101,8 @@ function displayWeatherForecast(data1) {
     <p>04:00 - ${hourFour}&deg;C</p>
     <p>08:00 - ${hourEight}&deg;C</p>
     <p>12:00 - ${hourTwelve}&deg;C</p>
-    <p>14:00 - ${hourSixteen}&deg;C</p>
-    <p>18:00 - ${hourTwenty}&deg;C</p>
+    <p>16:00 - ${hourSixteen}&deg;C</p>
+    <p>20:00 - ${hourTwenty}&deg;C</p>
     `
 
     tempInfoDiv.innerHTML = tempHTML;
