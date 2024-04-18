@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Weather </title>
 
-    <link rel="stylesheet" href="Weather.CSS">
-  </head>
-  <body>
+<head>
+  <title> Weather </title>
 
-    <style> *
-      {
-        background: #091021
-      }
-      </style>
+  <link rel="stylesheet" href="Weather.CSS">
+</head>
 
-    <h1>
-      Weather App
-    </h1>
-    <p>Input Location:</p>
-    <input type = "text" id = "locationInput">
-< Natan
-    <button onclick="setValue()" id = "buttonEnter"> Enter</button>
-> main
-    <script>
-      function setValue(){
-        var location = document.getElementById('locationInput').value
-        console.log(location)
-      }
-    </script>
-  </body>
+<body>
+
+  <style>
+    * {
+      background: #7799ee
+    }
+  </style>
+
+  <h1>
+    Weather App
+  </h1>
+  <p>Input Location:</p>
+  <input type="text" id="locationInput">
+
+  <button onclick="setValue()" id="buttonEnter"> Enter</button>
+
+  <script>
+    function setValue() {
+      var location = document.getElementById('locationInput').value
+      console.log(location)
+    }
+  </script>
+</body>
+
 </html>
