@@ -27,6 +27,30 @@ body {
       }
 }
 
+.day {
+    background: linear-gradient(to right, #48cae4, #caf0f8);
+
+    .ButtonEnter {
+        border: none;
+        outline: none;
+        height: 70px;
+        width: 70px;
+        font-size: 15px;
+        border-radius: 50px;
+        background: #48cae4;
+        transition: 0.3s ease;
+      }
+      
+      .ButtonEnter:Hover {
+        cursor: pointer;
+        background: #90e0ef;
+        box-shadow: 0 0 5px #90e0ef,
+                    0 0 20px #90e0ef,
+                    0 0 60px #90e0ef,
+                    0 0 150px #90e0ef;
+      }
+}
+
 .evening {
     background: linear-gradient(to right, #360033, #0b8793);
 
