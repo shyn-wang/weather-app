@@ -1,4 +1,78 @@
 body {
     background: linear-gradient(to right, rgb(52, 52, 82), rgb(66, 66, 71));
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}   
+
+.morning {
+    background: linear-gradient(to right, rgb(234, 90, 0), rgb(250, 243, 41));
+
+    .ButtonEnter {
+        border: none;
+        outline: none;
+        height: 70px;
+        width: 70px;
+        font-size: 15px;
+        border-radius: 50px;
+        background: #e27c45;
+        transition: 0.3s ease;
+      }
+      
+      .ButtonEnter:Hover {
+        cursor: pointer;
+        background: #dcbf18;
+        box-shadow: 0 0 5px #dcbf18,
+                    0 0 20px #dcbf18,
+                    0 0 60px #dcbf18,
+                    0 0 150px #dcbf18;
+      }
+}
+
+.evening {
+    background: linear-gradient(to right, #360033, #0b8793);
+
+    .ButtonEnter {
+        border: none;
+        outline: none;
+        height: 70px;
+        width: 70px;
+        font-size: 15px;
+        border-radius: 50px;
+        background: #48a79f;
+        transition: 0.3s ease;
+      }
+      
+      .ButtonEnter:Hover {
+        cursor: pointer;
+        background: #56b4d3;
+        box-shadow: 0 0 5px #56b4d3,
+                    0 0 20px #56b4d3,
+                    0 0 60px #56b4d3,
+                    0 0 150px #56b4d3;
+      }
+
+}
+
+.night {
+    background: linear-gradient(to right, rgb(74, 74, 74), black);
+
+    .ButtonEnter {
+        border: none;
+        outline: none;
+        height: 70px;
+        width: 70px;
+        font-size: 15px;
+        border-radius: 50px;
+        background: #101312;
+        transition: 0.3s ease;
+      }
+      
+      .ButtonEnter:Hover {
+        cursor: pointer;
+        background: #0a0a0a;
+        box-shadow: 0 0 5px #161819,
+                    0 0 20px #161819,
+                    0 0 60px #161819,
+                    0 0 150px #161819;
+      }
+
 }
