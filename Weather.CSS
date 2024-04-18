@@ -1,0 +1,9 @@
+.ButtonEnter {
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 140px;
+  font-size: 15px;
+  border-radius: 20px;
+}
+
