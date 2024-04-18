@@ -1,0 +1,54 @@
+.ButtonEnter {
+  border: none;
+  outline: none;
+  height: 70px;
+  width: 70px;
+  font-size: 15px;
+  border-radius: 50px;
+  background: #915e94;
+  transition: 0.3s ease;
+}
+
+.ButtonEnter:Hover {
+  cursor: pointer;
+  background: #915887;
+  box-shadow: 0 0 5px #915887,
+              0 0 20px #915887,
+              0 0 60px #915887,
+              0 0 150px #915887;
+}
+
+#title {
+  color: aliceblue;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;  
+}
+
+.search-bar {
+ width: 100%;
+ max-width: 700px;
+ background: rgba(255, 255, 255, 0.2);
+ display: flex;
+ align-items: center;
+ border-radius: 60px;
+ padding: 10px 20px;
+ backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: #cac7ff;
+}
