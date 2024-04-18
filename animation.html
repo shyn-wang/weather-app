@@ -14,12 +14,42 @@
             background-color: red;
             height: 50%;
             width: 50%;
+< Natan
             transition: 1s;
         }
 
         .parent:hover .child {
             background-color: green;
             transform: translateX(100%);
+=======
+            animation: left-to-right 1s linear both infinite;
+        }
+
+        .parent:hover .child {
+            animation-play-state: paused;
+        }
+
+        @keyframes left-to-right {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateY(100%);
+            }
+
+            50% {
+                transform: translateX(100%) translateY(100%);
+            }
+
+            75% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+> main
         }
     </style>
 </head>
