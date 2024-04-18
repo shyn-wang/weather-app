@@ -41,8 +41,13 @@ function displayWeatherCurrent(data) {
     const currentTemp = Math.round(data.current.temp_c);
     const condition = data.current.condition.text;
     const feelsLike = Math.round(data.current.feelslike_c);
-    const time = data.location.localtime
     const conditionIcon = data.current.condition.icon;
+
+    // time
+    const time = data.location.localtime
+    const time_parsed = time.split(" ")[1];
+    const hours = time_parsed.split(":")[0];
+    const minutes = time_parsed.split(":")[1];
 
     const conditionHTML = `
         <img src = ${conditionIcon}
@@ -55,7 +60,20 @@ function displayWeatherCurrent(data) {
         <p>${currentTemp}&deg;C | Feels Like ${feelsLike}&deg;C</p>
     `
     conditionInfoDiv.innerHTML = conditionHTML;
+
+    document.body.classList.remove("morning");
+    document.body.classList.remove("evening");
+    document.body.classList.remove("night");
+
+    if(hours >= 0 && hours <= 6){
+        document.body.classList.add("morning");
+    } else if(hours >= 7 && hours <= 19) {
+        document.body.classList.add("evening");
+    } else if(hours >=20  && hours <= 24){
+        document.body.classList.add("night");
+    }
 }
+
 
 function displayWeatherForecast(data1) {
     const tempInfoDiv = document.getElementById('temp-info');
@@ -75,8 +93,7 @@ function displayWeatherForecast(data1) {
     console.log(hourTwenty);
 
     const tempHTML = `
-    <h1>Hourly Forcast</h1>
-    <p>    </p>
+    <h1>Hourly Forecast</h1>
     <p>00:00 - ${hourZero}&deg;C</p>
     <p>04:00 - ${hourFour}&deg;C</p>
     <p>08:00 - ${hourEight}&deg;C</p>
