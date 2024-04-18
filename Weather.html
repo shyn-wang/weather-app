@@ -3,15 +3,18 @@
   <head>
     <title> Weather </title>
     <link href="css/cloud-animation.css" rel="stylesheet">
-    <Link rel = "stylesheet" href = "Weather.CSS">
+    <Link rel = "stylesheet" href = "css/Weather.CSS">
   </head>
   <body>
-    <h1>
-      Weather App
+    <h1 id="title">
+      cocoweather
     </h1>
-    <p>Input Location:</p>
-    <input type = "text" id = "locationInput">
-    <button class = "ButtonEnter" onclick="setValue(), getWeather()">Search </button>
+    <div class = "container">
+      <form action = "" class = "search-bar">
+        <input type = "text" id = "locationInput" placeholder="enter a location">
+        <button type = "button" class = "ButtonEnter" onclick="setValue(), getWeather()"><img src="images/search.png"></button>
+      </form>
+    </div>
     <script src="script.js"></script>
     <script>
       function setValue(){
