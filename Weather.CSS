@@ -1,10 +1,20 @@
-.ButtonEnter {
+.buttonEnter {
   border: none;
   outline: none;
   height: 40px;
   width: 140px;
   font-size: 15px;
   border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #ffc000;
+  box-shadow: 0 0 5px #ffc000,
+              0 0 20px #ffc000,
+              0 0 60px #ffc000,
+              0 0 150px #ffc000;
 }
 
 
