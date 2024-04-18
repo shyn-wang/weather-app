@@ -8,6 +8,7 @@ function getWeather() {
         .then(data => {
             displayWeather(data);
              console.log(data);
+             console.log(data.location.localtime);
         })
         .catch(error => {
             console.error('error fetching data: ', error);
@@ -26,6 +27,7 @@ function displayWeather(data) {
     const currentTemp = Math.round(data.current.temp_c);
     const condition = data.current.condition.text;
     const feelsLike = Math.round(data.current.feelslike_c);
+    const time = data.location.localtime
 
     const tempHTML = `
         <p>${currentTemp}&deg;C</p>
@@ -33,6 +35,7 @@ function displayWeather(data) {
     `
     const conditionHTML = `
         <p>${condition}</p>
+        <p>${time}</p>
     `
     tempInfoDiv.innerHTML = tempHTML;
     conditionInfoDiv.innerHTML = conditionHTML;
