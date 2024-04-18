@@ -22,7 +22,7 @@
   color: aliceblue;
   font-family: sans-serif;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 80px;
   font-size: 70px;
 }
 
@@ -55,15 +55,42 @@
 }
 
 .widget-bar {
-  position: relative;
-  left: 300px;
-  width: 80%;
-  max-width: 250px;
+  margin: auto;
+  align-content: center;
+  width: 275px;
   height: 400px;
   background: rgba(255, 255, 255, 0.2);
   display: flex;
   border-radius: 30px;
   padding: 1px 50px;
   backdrop-filter: blur(4px) saturate(180%);
-  display: none;
+ }
+
+ .test {
+  margin: auto;
+  width: 100%;
+  max-width: 730px;
+  display: flex;
+  padding-top: 30px;
+  gap: 50px;
+ }
+
+ #temp-info {
+  color: #cac7ff;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+ }
+
+ #condition-info {
+  color: #cac7ff;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+ }
+
+ #locationName {
+  font-size: 30px;
+  font-weight: bold;
  }

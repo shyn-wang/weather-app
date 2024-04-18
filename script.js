@@ -28,15 +28,28 @@ function displayWeather(data) {
     const condition = data.current.condition.text;
     const feelsLike = Math.round(data.current.feelslike_c);
     const time = data.location.localtime
+    const conditionIcon = data.current.condition.icon;
 
     const tempHTML = `
         <p>${currentTemp}&deg;C</p>
         <p>Feels Like ${feelsLike}&deg;C</p>
     `
     const conditionHTML = `
+        <img src = ${conditionIcon}
+            width = '128'
+            height = '128'
+        />
+        <p id = 'locationName'>${cityName}</p>
         <p>${condition}</p>
         <p>${time}</p>
     `
     tempInfoDiv.innerHTML = tempHTML;
     conditionInfoDiv.innerHTML = conditionHTML;
+}
+
+function widgetVisabilityToggle() {
+    var x = document.getElementById('temp-info')
+    var y = document.getElementById('condition-info')
+    x.style.display = 'block';
+    y.style.display = 'block';
 }
