@@ -1,8 +1,8 @@
 function getWeather() {
     const key = 'c290be99f9e246c687400007241804';
     const city = document.getElementById("locationInput").value;
-    const currentWeatherAPIUrl = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=yes`;
-    const forecastWeatherAPIUrl = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=1&aqi=no&alerts=no`
+    const currentWeatherAPIUrl = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=yes`;
+    const forecastWeatherAPIUrl = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=1&aqi=no&alerts=no`
 
     fetch(currentWeatherAPIUrl)
         .then(response => response.json())
